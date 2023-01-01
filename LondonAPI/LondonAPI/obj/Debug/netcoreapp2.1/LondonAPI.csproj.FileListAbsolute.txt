@@ -1,0 +1,13 @@
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\bin\Debug\netcoreapp2.1\LondonAPI.deps.json
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\bin\Debug\netcoreapp2.1\LondonAPI.runtimeconfig.json
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\bin\Debug\netcoreapp2.1\LondonAPI.runtimeconfig.dev.json
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\bin\Debug\netcoreapp2.1\LondonAPI.dll
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\bin\Debug\netcoreapp2.1\LondonAPI.pdb
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.csproj.CoreCompileInputs.cache
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.RazorAssemblyInfo.cache
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.RazorAssemblyInfo.cs
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.AssemblyInfoInputs.cache
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.AssemblyInfo.cs
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.RazorTargetAssemblyInfo.cache
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.dll
+D:\Study\ASPdotNET_Core\WebAPIs\LondonAPI\LondonAPI\obj\Debug\netcoreapp2.1\LondonAPI.pdb
