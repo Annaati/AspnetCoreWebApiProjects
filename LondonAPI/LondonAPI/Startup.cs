@@ -31,6 +31,7 @@ namespace LondonAPI
             services.AddMvc(options =>
             {
                 options.Filters.Add<JsonExceptionFilter>();
+                options.Filters.Add<RequireHttpsOrCloseAttribute>();
             }
                 ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -43,6 +44,11 @@ namespace LondonAPI
                 options.AssumeDefaultVersionWhenUnspecified = true;
                 options.ReportApiVersions = true;
                 options.ApiVersionSelector = new CurrentImplementationApiVersionSelector(options);
+            });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowedDomains", policy => policy.AllowAnyOrigin());
             });
         }
 
@@ -63,7 +69,8 @@ namespace LondonAPI
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors("AllowedDomains");
+
             app.UseMvc();
         }
     }

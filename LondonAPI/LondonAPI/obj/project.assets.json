@@ -12796,9 +12796,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\LondonAPI\\LondonAPI\\LondonAPI.csproj",
-      "projectName": "LondonAPI",
-      "projectPath": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\LondonAPI\\LondonAPI\\LondonAPI.csproj",
+      "projectUniqueName": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\LondonAPI\\LondonAPI\\MogadishuAPI.csproj",
+      "projectName": "MogadishuAPI",
+      "projectPath": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\LondonAPI\\LondonAPI\\MogadishuAPI.csproj",
       "packagesPath": "C:\\Users\\AbdifatahAnnaat\\.nuget\\packages\\",
       "outputPath": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\LondonAPI\\LondonAPI\\obj\\",
       "projectStyle": "PackageReference",
