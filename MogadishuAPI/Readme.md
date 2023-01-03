@@ -1,2 +1,2 @@
-# Mogashu API 
-### Mogashu API API Is A fictional Hotel Backend (API) developed using ASPnet Core Web API(V2.1) originally Linked Learning course by [Nate Barbetteni](https://www.linkedin.com/in/nbarbettini) *CTO and Lead Engineer at Cobbler*.
+## Mogashu API 
+#### Mogashu API API Is A fictional Hotel Backend (API) developed using ASPnet Core Web API(V2.1) originally Linked Learning course by [Nate Barbetteni](https://www.linkedin.com/in/nbarbettini) *CTO and Lead Engineer at Cobbler*.
