@@ -1,0 +1,13 @@
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\bin\Debug\netcoreapp2.1\MogadishuAPI.deps.json
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\bin\Debug\netcoreapp2.1\MogadishuAPI.runtimeconfig.json
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\bin\Debug\netcoreapp2.1\MogadishuAPI.runtimeconfig.dev.json
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\bin\Debug\netcoreapp2.1\MogadishuAPI.dll
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\bin\Debug\netcoreapp2.1\MogadishuAPI.pdb
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.csproj.CoreCompileInputs.cache
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.RazorAssemblyInfo.cache
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.RazorAssemblyInfo.cs
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.AssemblyInfoInputs.cache
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.AssemblyInfo.cs
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.RazorTargetAssemblyInfo.cache
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.dll
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.pdb
