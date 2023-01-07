@@ -1,5 +1,6 @@
 ﻿using MogadishuAPI.Filters;
 using MogadishuAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NSwag.AspNetCore;
+using MogadishuAPI.Services;
+using AutoMapper;
 
 namespace MogadishuAPI
 {
@@ -24,10 +27,17 @@ namespace MogadishuAPI
         {
             services.Configure<HotelInfo>(Configuration.GetSection("HotelInfo"));
 
+            services.AddScoped<IRoomService, RoomService>();
+
+            // Use in-memory Database for Development & Test
+            //TODO: Swap for Real Database in Prduction
+            services.AddDbContext<HotelAPIDbContext>(options => options.UseInMemoryDatabase("MogadishuHotelAPI"));
+
             services.AddMvc(options =>
             {
                 options.Filters.Add<JsonExceptionFilter>();
                 options.Filters.Add<RequireHttpsOrCloseAttribute>();
+                options.Filters.Add<LinkRewritingFilter>();
             }
                 ).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
@@ -46,6 +56,8 @@ namespace MogadishuAPI
             {
                 options.AddPolicy("AllowedDomains", policy => policy.AllowAnyOrigin());
             });
+
+            services.AddAutoMapper(options => options.AddProfile<Infrastructure.MappingProfile>());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
