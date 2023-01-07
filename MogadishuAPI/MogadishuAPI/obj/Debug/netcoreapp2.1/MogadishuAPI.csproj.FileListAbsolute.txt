@@ -11,3 +11,4 @@ D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.
 D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.RazorTargetAssemblyInfo.cache
 D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.dll
 D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.pdb
+D:\Study\ASPdotNET_Core\WebAPIs\MogadishuAPI\MogadishuAPI\obj\Debug\netcoreapp2.1\MogadishuAPI.csprojAssemblyReference.cache

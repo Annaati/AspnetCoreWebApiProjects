@@ -1,0 +1,100 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Study\\ASPdotNET_Core\\WebAPIs\\MogadishuAPI\\MogadishuAPI\\MogadishuAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\Study\\ASPdotNET_Core\\WebAPIs\\MogadishuAPI\\MogadishuAPI\\MogadishuAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\MogadishuAPI\\MogadishuAPI\\MogadishuAPI.csproj",
+        "projectName": "MogadishuAPI",
+        "projectPath": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\MogadishuAPI\\MogadishuAPI\\MogadishuAPI.csproj",
+        "packagesPath": "C:\\Users\\AbdifatahAnnaat\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\ASPdotNET_Core\\WebAPIs\\MogadishuAPI\\MogadishuAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\AbdifatahAnnaat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.1.9, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[11.17.21, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
