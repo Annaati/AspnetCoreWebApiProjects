@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MogadishuAPI.Models;
 
 namespace MogadishuAPI.Controllers
 {
@@ -15,19 +16,13 @@ namespace MogadishuAPI.Controllers
         [ProducesResponseType(200)]
         public IActionResult GetRoot()
         {
-            var response = new
+            var response = new RootResponse
             {
-                href = Url.Link(nameof(GetRoot), null),
+                Self =  Link.To(nameof(GetRoot)),
                 
-                rooms = new
-                {
-                    href = Url.Link(nameof(RoomsController.GetRooms), null)
-                },
+                Rooms = Link.ToCollection(nameof(RoomsController.GetAllRooms)),
 
-                hotel = new
-                {
-                    href = Url.Link(nameof(HotelInfoController.getHotelInfo), null)
-                }
+                HotelInfo = Link.To(nameof(HotelInfoController.getHotelInfo)),
 
             };
             return Ok(response);
