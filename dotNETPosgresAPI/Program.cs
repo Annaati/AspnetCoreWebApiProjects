@@ -1,6 +1,7 @@
 using dotNETPosgresAPI.Services.Heplers;
 using dotNETPosgresAPI.Services.Interfaces;
 using dotNETPosgresAPI.Services;
+using dotNETPosgresAPI.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,11 +13,20 @@ builder.Services.AddSingleton<FileUploadHelper>();
 
 builder.Services.AddScoped<IAccountService, AccountService>();
 
+builder.Services.AddMvc(options =>
+{
+    options.Filters.Add<JsonExceptionFilter>();
+    //options.Filters.Add<RequireHttpsOrCloseAttribute>();
+});
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCors(c =>
+{
+    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -27,6 +37,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHsts();
+//app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseRouting();
+
+app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
