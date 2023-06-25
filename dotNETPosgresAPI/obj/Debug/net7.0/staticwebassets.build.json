@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "1gbmyWgV8vTT/SNIO7wcD71bKMguy54qreocLkAqP/I=",
+  "Source": "dotNETPosgresAPI",
+  "BasePath": "_content/dotNETPosgresAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

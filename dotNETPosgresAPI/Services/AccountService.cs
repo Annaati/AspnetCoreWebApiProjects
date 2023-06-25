@@ -1,10 +1,18 @@
-﻿using dotNETPosgresAPI.DTO.Account;
+﻿using dotNETPosgresAPI.Data;
+using dotNETPosgresAPI.DTO.Account;
 using dotNETPosgresAPI.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace dotNETPosgresAPI.Services
 {
     public class AccountService : IAccountService
     {
+        private readonly dotNetPostgresDbContext _context;
+
+        public AccountService(dotNetPostgresDbContext context)
+        {
+            _context = context;
+        }
 
 
 
@@ -27,7 +35,7 @@ namespace dotNETPosgresAPI.Services
         }
 
 
-        public UserEditReq? EditUser(UserEditReq req)
+        public UserEditReq? UpdateUser(UserEditReq req)
         {
             throw new NotImplementedException();
         }
@@ -38,12 +46,19 @@ namespace dotNETPosgresAPI.Services
 
         #region User Records section
 
-        public List<UserRes> UsersList()
+        public IEnumerable<UserRes> UsersList()
+        {
+            return _context.Users;
+        }
+        
+
+        public UserRes? UserById(int? id)
         {
             throw new NotImplementedException();
         }
 
-        public UserRes? UserById(int? id)
+
+        public UserRes? CurrentUser()
         {
             throw new NotImplementedException();
         }

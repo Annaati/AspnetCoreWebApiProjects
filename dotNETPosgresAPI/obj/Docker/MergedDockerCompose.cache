@@ -1,0 +1,18 @@
+name: dockercompose17584189459178251976
+services:
+  dotnetposgresapi:
+    build:
+      context: D:\Study\dotNET\Open-AspNetCore-WebAPIs\dotNETPosgresAPI
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: dotnetposgresapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose17584189459178251976_default

@@ -14,7 +14,7 @@ namespace dotNETPosgresAPI.Services.Interfaces
 
         UserAddReq? AddUser(UserAddReq req);
 
-        UserEditReq? EditUser(UserEditReq req);
+        UserEditReq? UpdateUser(UserEditReq req);
 
         #endregion
 
@@ -23,6 +23,10 @@ namespace dotNETPosgresAPI.Services.Interfaces
         List<UserRes> UsersList();
 
         UserRes? UserById(int? id);
+
+
+        UserRes? CurrentUser();
+
         #endregion
 
 
