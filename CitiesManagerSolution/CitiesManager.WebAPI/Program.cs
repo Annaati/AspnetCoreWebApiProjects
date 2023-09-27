@@ -1,3 +1,5 @@
+using CitiesManager.WebAPI.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "CitiesManager.WebAPI", Version = "v1" });
+});
+
+builder.Services.AddDbContext<MsSqlDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetValue<string>("ConnectionStrings:MsSqlConnStr") ?? throw new ApplicationException("Couldn't find specified db Sever details"));
 });
 
 var app = builder.Build();
