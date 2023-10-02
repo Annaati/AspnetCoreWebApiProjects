@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CitiesManager.WebAPI.Migrations
 {
     [DbContext(typeof(MsSqlDbContext))]
-    [Migration("20230927044138_initialCitiesDbMigration")]
-    partial class initialCitiesDbMigration
+    [Migration("20231002030718_initailMigrationWithtblCitiesAndItsSampleSeedData")]
+    partial class initailMigrationWithtblCitiesAndItsSampleSeedData
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,19 +42,24 @@ namespace CitiesManager.WebAPI.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("cityName");
 
-                    b.Property<decimal>("Latitude")
+                    b.Property<decimal?>("Latitude")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("latitude");
 
-                    b.Property<decimal>("Longitude")
+                    b.Property<decimal?>("Longitude")
                         .HasColumnType("decimal(18,2)")
                         .HasColumnName("longitude");
 
                     b.Property<DateTime>("RegAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 9, 27, 7, 41, 38, 355, DateTimeKind.Local).AddTicks(6228))
+                        .HasDefaultValue(new DateTime(2023, 10, 2, 6, 7, 18, 274, DateTimeKind.Local).AddTicks(2866))
                         .HasColumnName("regAt");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("status");
 
                     b.HasKey("CityId");
 
@@ -68,7 +73,8 @@ namespace CitiesManager.WebAPI.Migrations
                             CityName = "Mogadishu",
                             Latitude = 2.05368398776368m,
                             Longitude = 45.31820111676328m,
-                            RegAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            RegAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = "active"
                         });
                 });
 #pragma warning restore 612, 618

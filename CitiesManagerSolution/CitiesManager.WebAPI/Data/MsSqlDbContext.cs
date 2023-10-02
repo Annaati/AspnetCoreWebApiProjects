@@ -32,9 +32,10 @@ namespace CitiesManager.WebAPI.Data
             modelBuilder.Entity<City>().HasData(new City { 
                                                             CityId = Guid.Parse("A32054F2-54C9-4A95-91E6-1B24558573A6"),
                                                             CityCode = "MGQ",
-                                                            CityName="Mogadishu",
-                                                            Latitude= decimal.Parse("2.05368398776368"),
-                                                            Longitude=decimal.Parse("45.31820111676328")
+                                                            CityName = "Mogadishu",
+                                                            Latitude = decimal.Parse("2.05368398776368"),
+                                                            Longitude = decimal.Parse("45.31820111676328"),
+                                                            Status = "active"
                                                          });
         }
 

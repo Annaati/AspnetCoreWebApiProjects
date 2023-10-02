@@ -6,7 +6,7 @@ namespace CitiesManager.WebAPI.Controllers
     [ApiVersion("1")]
     [Route("api/v{version:ApiVersion}/[controller]/[action]")]
     [ApiController]
-    public class BaseApiController : ControllerBase
+    public class ApiBaseController : ControllerBase
     {
     }
 }
