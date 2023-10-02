@@ -17,13 +17,18 @@ namespace CitiesManager.WebAPI.Entities
         public string CityName { get; set; }
 
         [Column("latitude")]
-        public decimal Latitude { get; set; }
+        [DataType("decimal(18,18)")]
+        public decimal? Latitude { get; set; }
 
         [Column("longitude")]
-        public decimal Longitude { get; set; }
+        [DataType("decimal(18,18)")]
+        public decimal? Longitude { get; set; }
 
         [Column("regAt")]
         public DateTime RegAt { get; set; }
+
+        [Column("status")]
+        public string Status { get; set; }
 
     }
 }
