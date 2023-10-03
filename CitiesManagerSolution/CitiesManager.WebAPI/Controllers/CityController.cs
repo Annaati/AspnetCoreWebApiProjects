@@ -63,8 +63,10 @@ namespace CitiesManager.WebAPI.Controllers
         {
             var result = await _cityService.AddCityAsync(req);
 
+            Response.StatusCode = result.StatusCode;
+
             if (result.Success == true)
-                return Ok(result);
+                return CreatedAtAction("", new { cityId = result?.Data?.CityId }, req);
 
             return result;
         }
@@ -72,9 +74,11 @@ namespace CitiesManager.WebAPI.Controllers
 
         [HttpPut("{cityId}")]
         [ProducesResponseType(typeof(ApiResponseVM<City>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<ApiResponseVM<City>>> UpdateCity(Guid? cityId, CityEditReq req)
+        public async Task<ActionResult<ApiResponseVM<City>>> UpdateCity(Guid? cityId, [FromBody]CityEditReq req)
         {
             var result = await _cityService.UpdateCityAsync(cityId, req);
+
+            Response.StatusCode = result.StatusCode;
 
             if (result.Success == true)
                 return Ok(result);
@@ -88,6 +92,8 @@ namespace CitiesManager.WebAPI.Controllers
         public async Task<ActionResult<ApiResponseVM<City>>> DeleteCity(Guid? cityId)
         {
             var result = await _cityService.DeleteCityAsync(cityId);
+
+            Response.StatusCode = result.StatusCode;
 
             if (result.Success == true)
                 return Ok(result);

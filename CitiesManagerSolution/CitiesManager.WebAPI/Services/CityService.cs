@@ -37,6 +37,8 @@ namespace CitiesManager.WebAPI.Services
         {
             var city = await _dbContext.Cities.Select(c => c.ToCityRes()).Where(c=>c.CityId==cityId).FirstOrDefaultAsync();
 
+            //var city = _dbContext.Cities.Select(c => c.ToCityRes()).FirstOrDefaultAsync(city=>city.CityId==cityId);
+
             //city = await _dbContext.Cities.Where(c => c.CityId == cityId).FirstOrDefaultAsync();
             
 
@@ -58,23 +60,52 @@ namespace CitiesManager.WebAPI.Services
             await _dbContext.Cities.AddAsync(city);
             var result = _dbContext.SaveChanges();
 
-            if (result < 1) throw new BadHttpRequestException("Could not Save record", 500);
+            if (result < 1) return new ApiResponseVM<City>(false, 500, "error", "Couldn't save City details", null); //throw new BadHttpRequestException("Could not Save record", 500);
 
-            return new ApiResponseVM<City>(true, 201, "Success", "City Created Successfuly", city );
+            return new ApiResponseVM<City>(true, 201, "success", "City Created Successfuly", city);
         }
 
         
         
-        public Task<ApiResponseVM<City>> UpdateCityAsync(Guid? cityId, CityEditReq? req)
+        public async Task<ApiResponseVM<City>> UpdateCityAsync(Guid? cityId, CityEditReq? req)
         {
-            throw new NotImplementedException();
+            if (cityId == null) throw new ArgumentNullException(nameof(cityId), "City id cannot be empty");
+
+            if(req == null) throw new ArgumentNullException (nameof(req), "Please Provide all required data");
+
+            var existingCity = await _dbContext.Cities.FirstOrDefaultAsync(c=>c.CityId==cityId) 
+                ?? throw new BadHttpRequestException("No City Record Matching the the specified City id was found", 404);
+
+            existingCity.CityCode = req.CityCode;
+            existingCity.CityName = req.CityName;
+            existingCity.Latitude = req.Latitude;
+            existingCity.Longitude = req.Longitude;
+            existingCity.Status = req.Status;
+
+            //_dbContext.Cities.Update(existingCity);
+            var result = await _dbContext.SaveChangesAsync();
+
+            if (result < 1) return new ApiResponseVM<City>(false, 500, "error", "Couldn't update City details", null);
+
+            return new ApiResponseVM<City>(true, 204, "success", "City details updated successfully", existingCity);
         }
         
         
         
-        public Task<ApiResponseVM<City>> DeleteCityAsync(Guid? cityId)
+        public async Task<ApiResponseVM<City>> DeleteCityAsync(Guid? cityId)
         {
-            throw new NotImplementedException();
+            if (cityId == null) throw new ArgumentNullException(nameof(cityId), "City id cannot be empty");
+
+            var city = await _dbContext.Cities.FirstOrDefaultAsync(c=>c.CityId==cityId) 
+                ?? throw new BadHttpRequestException("No City record with the specified city id was found", 404);
+
+             _dbContext.Cities.Remove(city);
+
+            var result = await _dbContext.SaveChangesAsync();
+
+            if (result < 1) return new ApiResponseVM<City>(false, 500, "error", "Couldn't delete city record", null);
+
+            return new ApiResponseVM<City>(true, 204, "success", "City record deleted successfully", null);
         }
 
         #endregion
